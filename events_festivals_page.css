@@ -222,9 +222,7 @@ header {
     color: #FEFCFB;
     text-align: center;
     font-size: 0.7em;
-    padding: 1rem;
-    position: relative;
-    }
+}
     .menu-toggle {
     display: none;
     cursor: pointer;
