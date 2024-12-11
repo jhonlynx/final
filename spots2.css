@@ -1,0 +1,346 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-decoration: none;
+
+    /* Unique animated gradient background */
+    background-color: #FEFCFB;
+}
+
+/* Ensure smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    background: linear-gradient(to bottom, #034078, #1282A2);
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: auto;
+}
+
+/* Logo Styling */
+.dekstop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread logo and links evenly */
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: 100%;
+}
+
+.dekstop ul {
+    display: flex; /* Horizontally align menu items */
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+    gap: 100px
+}
+
+.dekstop ul li {
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+.dekstop ul li a {
+    text-decoration: none; /* Remove link underline */
+    color: #FEFCFB; /* Set link color */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dekstop ul :hover {
+    color: #F59E0B;
+}
+
+.menu-checkbox,
+.menu-btn,
+.side-menu {
+    display: none; /* Hide the side menu by default */
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FEFCFB;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F59E0B;
+    text-decoration: underline;
+}
+
+/* Main Section Styling */
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 100px; /* Add extra padding to the bottom */
+}
+main h1 {
+    color: #F59E0B;
+}
+
+/* Button Styling */
+.button {
+    background-color: #FBBF24; /* Yellow background */
+    color: #1F2937; /* Dark text color */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.fest-button:hover {
+    background-color: #F59E0B; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+.details {
+    display: flexbox;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.details img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.detail p {
+    margin: 0 auto;
+    font-size: 1.5em;
+    color: #0A1128;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.detail h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #F59E0B;
+    font-size: 1.5em;
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase;
+}
+
+.detail {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+    
+}
+.detail iframe {
+    width: 900px;
+    height: 300px;
+}
+.image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 375px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.image-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    width: 500px;
+    height: 500px;
+    display: block;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FEFCFB;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Footer Styling */
+.Copyright {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #001f54;
+    color: #FEFCFB;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+@media (max-width: 1151px) {
+    /* Styling for the menu button */
+    .dekstop ul{
+        display: none; /* Hide the default header for smaller screens */
+    }
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #F59E0B;
+            font-size: 1.4em;
+            cursor: pointer;
+            padding: 0 12px;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+    
+        .menu-btn:hover {
+            color: #FEFCFB;
+        }
+    
+    
+        /* Checkbox to Toggle Menu */
+        .menu-checkbox {
+            display: none;
+        }
+    
+        .menu-checkbox:checked ~ .side-menu {
+            right: 0; /* Slide menu into view */
+        }
+    
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #FEFCFB;
+            font-size: 1.8em;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+    
+        .close-btn:hover {
+            color: #F59E0B;
+        }
+    
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -350px; /* Initially hidden */
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(3, 64, 120, 0.8), rgba(0, 31, 84, 0.8));
+            color: #FEFCFB;
+            display: flex; /* Flexbox for vertical alignment */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 1000;
+        }
+    
+        .side-menu img{
+            width: 60px;
+            height: 60px;
+        }
+    
+        /* Side Menu List */
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Flexbox for spacing items */
+            flex-direction: column; /* Stack items vertically */
+            width: 100%; /* Ensure the list spans the menu width */
+            text-align: center;
+        }
+    
+        .side-menu li {
+            padding: 20px; /* Reset padding to avoid overlap with gap */
+        }
+    
+        .side-menu a {
+            color: #FEFCFB;
+            text-decoration: none;
+            font-size: 1.2em; /* Adjust font size for better readability */
+            width: 100%; /* Full-width links */
+            display: block; /* Ensure links take up the full width */
+            text-align: center;
+        }
+    
+        .side-menu a:hover {
+            background-color: #0A1128;
+        }
+    }
+    
+    @media (min-width: 1151px) {
+        .dekstop ul {
+            display: flex; /* Horizontally align menu items */
+            list-style: none; /* Remove default bullets */
+            margin: 0;
+            padding: 0;
+            gap: 50px
+        }
+    
+    }
