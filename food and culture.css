@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    background: linear-gradient(to bottom, #034078, #1282A2);
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+.logo {
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: auto;
+}
+
+/* Logo Styling */
+.dekstop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread logo and links evenly */
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: 100%;
+}
+
+.dekstop ul {
+    display: flex; /* Horizontally align menu items */
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+    gap: 100px
+}
+
+.dekstop ul li {
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+.dekstop ul li a {
+    text-decoration: none; /* Remove link underline */
+    color: #FEFCFB; /* Set link color */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dekstop ul :hover {
+    color: #F59E0B;
+}
+
+.menu-checkbox,
+.menu-btn,
+.side-menu {
+    display: none; /* Hide the side menu by default */
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1e40af;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+/* Food Cards Layout */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #1e40af;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #475569;
+}
+
+
+
+@media (max-width: 1000px) {
+    /* Styling for the menu button */
+    .dekstop ul{
+        display: none; /* Hide the default header for smaller screens */
+    }
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #F59E0B;
+            font-size: 1.4em;
+            cursor: pointer;
+            padding: 0 12px;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+    
+        .menu-btn:hover {
+            color: #FEFCFB;
+        }
+    
+    
+        /* Checkbox to Toggle Menu */
+        .menu-checkbox {
+            display: none;
+        }
+    
+        .menu-checkbox:checked ~ .side-menu {
+            right: 0; /* Slide menu into view */
+        }
+    
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #FEFCFB;
+            font-size: 1.8em;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+    
+        .close-btn:hover {
+            color: #F59E0B;
+        }
+    
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -350px; /* Initially hidden */
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(3, 64, 120, 0.8), rgba(0, 31, 84, 0.8));
+            color: #FEFCFB;
+            display: flex; /* Flexbox for vertical alignment */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 1000;
+        }
+    
+        .side-menu img{
+            width: 60px;
+            height: 60px;
+        }
+    
+        /* Side Menu List */
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Flexbox for spacing items */
+            flex-direction: column; /* Stack items vertically */
+            width: 100%; /* Ensure the list spans the menu width */
+            text-align: center;
+        }
+    
+        .side-menu li {
+            padding: 20px; /* Reset padding to avoid overlap with gap */
+        }
+    
+        .side-menu a {
+            color: #FEFCFB;
+            text-decoration: none;
+            font-size: 1.2em; /* Adjust font size for better readability */
+            width: 100%; /* Full-width links */
+            display: block; /* Ensure links take up the full width */
+            text-align: center;
+        }
+    
+        .side-menu a:hover {
+            background-color: #0A1128;
+        }
+    }
+    
+    @media (min-width: 1000px) {
+        .dekstop ul {
+            display: flex; /* Horizontally align menu items */
+            list-style: none; /* Remove default bullets */
+            margin: 0;
+            padding: 0;
+            gap: 50px
+        }
+    
+    }
+    
