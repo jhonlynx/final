@@ -1,0 +1,360 @@
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+    }
+    
+    /* Header */
+header {
+    display: flex;
+    background: linear-gradient(to bottom, #034078, #1282A2);
+    color: #FEFCFB;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+.logo {
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: auto;
+}
+
+/* Logo Styling */
+.dekstop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread logo and links evenly */
+    padding-left: 20px;
+    max-height: 80px; /* Limit the logo's height */
+    width: 100%;
+}
+
+.dekstop ul {
+    display: flex; /* Horizontally align menu items */
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+    gap: 100px
+}
+
+.dekstop ul li {
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+.dekstop ul li a {
+    text-decoration: none; /* Remove link underline */
+    color: #FEFCFB; /* Set link color */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dekstop ul :hover {
+    color: #F59E0B;
+}
+
+.menu-checkbox,
+.menu-btn,
+.side-menu {
+    display: none; /* Hide the side menu by default */
+}
+    
+    /* Section Styles */
+    .section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Adjusted background color to make text more visible */
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    color: #0a1128; /* Adjusted the text color to make it more visible */
+    font-weight: bold; /* Increased font weight for better contrast */
+    }
+    
+    .section .container {
+    max-width: 1200px;
+    margin: auto;
+    }
+    
+    .section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #0a1128;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #001f54; /* Set the text color to darker blue */
+    }
+    
+    
+    
+    
+    /* About Cards Container */
+    .about-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+    }
+    
+    .card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card .background {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: filter 0.3s;
+    }
+    
+    .card:hover .background {
+    filter: brightness(0.8);
+    }
+    
+    .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Removed overlay */
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: background-color 0.3s;
+    }
+    
+    .card:hover .card-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .card-content h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    .card-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #034078;
+    }
+    
+    .card-content .view-more {
+    color: #f59e0b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    }
+    
+    .card-content .view-more:hover {
+    color: #1282a2;
+    }
+    
+    /* Details Section */
+    .details-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+    }
+    
+    .details-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #0a1128;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .details-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #001f54;
+    }
+    
+    .details-section .image-grid, .details-section .image-grid2, .details-section .image-grid3, .details-section .image-grid4, .details-section .image-grid5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    }
+    
+    .details-section .image-grid img, .details-section .image-grid2 img, .details-section .image-grid3 img, .details-section .image-grid4 img, .details-section .image-grid5 img {
+    width: 100%; /* Sets the width to 100% of its container */
+    height: 200px; /* Sets a consistent height */
+    border-radius: 10px;
+    object-fit: cover; /* Maintains the aspect ratio */
+    transition: transform 0.3s;
+    }
+    
+    .details-section .image-grid img:hover, .details-section .image-grid2 img:hover, .details-section .image-grid3 img:hover, .details-section .image-grid4 img:hover, .details-section .image-grid5 img:hover {
+    transform: scale(1.05);
+    }
+    .Copyright {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #001f54;
+    color: #FEFCFB;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 1rem;
+    position: relative;
+    }
+    .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    }
+    
+    .menu-icon {
+    display: block;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+    .about-cards-container {
+    grid-template-columns: 1fr;
+    }
+    
+    .details-section {
+    padding: 40px 15px;
+    }
+    }
+
+    @media (max-width: 1000px) {
+        /* Styling for the menu button */
+        .dekstop ul{
+            display: none; /* Hide the default header for smaller screens */
+        }
+            .menu-btn {
+                background: none;
+                border: none;
+                color: #F59E0B;
+                font-size: 1.4em;
+                cursor: pointer;
+                padding: 0 12px;
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                transition: color 0.2s ease;
+            }
+        
+            .menu-btn:hover {
+                color: #FEFCFB;
+            }
+        
+        
+            /* Checkbox to Toggle Menu */
+            .menu-checkbox {
+                display: none;
+            }
+        
+            .menu-checkbox:checked ~ .side-menu {
+                right: 0; /* Slide menu into view */
+            }
+        
+            /* Close Button */
+            .close-btn {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: none;
+                border: none;
+                color: #FEFCFB;
+                font-size: 1.8em;
+                cursor: pointer;
+                transition: color 0.2s ease;
+            }
+        
+            .close-btn:hover {
+                color: #F59E0B;
+            }
+        
+            /* Side Menu */
+            .side-menu {
+                position: fixed;
+                top: 0;
+                right: -350px; /* Initially hidden */
+                width: 300px;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(3, 64, 120, 0.8), rgba(0, 31, 84, 0.8));
+                color: #FEFCFB;
+                display: flex; /* Flexbox for vertical alignment */
+                flex-direction: column; /* Stack items vertically */
+                justify-content: center; /* Center items vertically */
+                align-items: center; /* Center items horizontally */
+                overflow-y: auto; /* Allow scrolling if content overflows */
+                transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                z-index: 1000;
+            }
+        
+            .side-menu img{
+                width: 60px;
+                height: 60px;
+            }
+        
+            /* Side Menu List */
+            .side-menu ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex; /* Flexbox for spacing items */
+                flex-direction: column; /* Stack items vertically */
+                width: 100%; /* Ensure the list spans the menu width */
+                text-align: center;
+            }
+        
+            .side-menu li {
+                padding: 20px; /* Reset padding to avoid overlap with gap */
+            }
+        
+            .side-menu a {
+                color: #FEFCFB;
+                text-decoration: none;
+                font-size: 1.2em; /* Adjust font size for better readability */
+                width: 100%; /* Full-width links */
+                display: block; /* Ensure links take up the full width */
+                text-align: center;
+            }
+        
+            .side-menu a:hover {
+                background-color: #0A1128;
+            }
+        }
+        
+        @media (min-width: 1000px) {
+            .dekstop ul {
+                display: flex; /* Horizontally align menu items */
+                list-style: none; /* Remove default bullets */
+                margin: 0;
+                padding: 0;
+                gap: 50px
+            }
+        
+        }
+    
