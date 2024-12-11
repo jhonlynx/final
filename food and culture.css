@@ -137,6 +137,16 @@ p {
     color: #475569;
 }
 
+.Copyright {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #001f54;
+    color: #FEFCFB;
+    text-align: center;
+    font-size: 0.7em;
+}
+
 
 
 @media (max-width: 1000px) {
